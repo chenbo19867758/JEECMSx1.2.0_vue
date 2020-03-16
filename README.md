@@ -412,13 +412,12 @@ npm run build
 ```
 
 ## 4、SRC目录结构
-┌─api            	      接口目录
-├─assets            		静态资源目录
+┌─api            	    接口目录 (src/api/urls中定义接口地址，地址不重复； src/api/apis中定义请求方法)
+├─assets            	静态资源目录(css,img)
 ├─components            复用组件目录
 ├─directive             vue指令目录
 ├─i18n                  国际化配置目录
 ├─layouts               布局组件目录
-├─routes                vue路由配置目录
 ├─routes                vue路由配置目录
 ├─store                 vuex存储目录
 ├─views                 业务页面目录
@@ -440,6 +439,7 @@ npm run build
 其他文件说明：
 ├─.env.development      开发环境变量
 ├─.env.production       生产环境变量
+├─.gitigore             git提交忽略文件
 ├─element-variables.scss饿了么UI变量文件
 ├─gulpfile.js           打包饿了么UI主题工具
 └─package.json          安装包配置

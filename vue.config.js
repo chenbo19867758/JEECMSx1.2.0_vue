@@ -37,7 +37,8 @@ module.exports = {
         // target: 'http://192.168.0.185:8082',
         // target: 'http://192.168.0.173:8080',
         // target: 'http://mw.mock.server.ywzhou.shop',
-        target: 'http://x1test.jeecms.com',
+        // target: 'http://x1test.jeecms.com',
+        target: 'http://localhost:8082',
         // changeOrigin: true,
         autoRewrite: true,
         cookieDomainRewrite: {

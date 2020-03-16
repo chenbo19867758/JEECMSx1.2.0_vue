@@ -3,6 +3,7 @@ import qs from 'qs'
 import { Message } from 'element-ui'
 import router from '@/routes'
 
+// 权限token
 const tokenKey = 'JEECMS-Auth-Token'
 const request = axios.create({
   baseURL: process.env.VUE_APP_API_PREFIX,
@@ -24,6 +25,7 @@ const baseHeader = () => {
   }
 }
 
+// 请求拦截
 request.interceptors.request.use(config => {
   config.headers = Object.assign({}, baseHeader(), config.headers)
   if (!config.url) {
@@ -43,6 +45,7 @@ request.interceptors.request.use(config => {
   return Promise.reject(error)
 })
 
+// 请求拦截
 request.interceptors.response.use(response => {
   if (response.data.token && response.data.token !== '') {
     localStorage.setItem(tokenKey, response.data.token)
@@ -115,6 +118,7 @@ const requestLogin = axios.create({
   }
 })
 
+// 请求拦截
 requestLogin.interceptors.request.use(config => {
   config.data = qs.stringify(config.data)
   return config
@@ -122,6 +126,7 @@ requestLogin.interceptors.request.use(config => {
   return Promise.reject(error)
 })
 
+// 请求拦截
 requestLogin.interceptors.response.use(response => {
   return response
 }, error => {
