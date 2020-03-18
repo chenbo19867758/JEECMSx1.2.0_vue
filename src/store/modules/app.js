@@ -1,6 +1,7 @@
 import request from '@/api'
 import { desEncrypt, getImageUrl } from '@/utils'
 export default {
+  // 模块内部的 action、mutation 和 getter 是注册在全局命名空间，添加 namespaced: true 的方式使其成为带命名空间，启用了命名空间的 getter 和 action 会收到局部化的 getter，dispatch 和 commit，而mutation依然只能改变局部state
   namespaced: true,
   state: {
     theme: '',
@@ -121,6 +122,7 @@ export default {
     },
     // 用户和路由权限
     SET_USER (state, data) {
+      // 结构复制
       const { auth, ...propData } = data
       const { menus, routings, ...user } = auth
       state.user = Object.assign({}, state.user, user, propData)
@@ -189,12 +191,24 @@ export default {
       commit('UPDATE_LANG', data)
     },
     // 普通登录
+    // state：数据对象，commit：提交修改方法，rootState：根节点数据对象，dispatch actions：的全局异步调用方法
     fetchLogin ({ state, commit, rootState, dispatch }, data) {
+      // desEncrypt  utils\index.js 中的方法
+      // data.desStr 为 form 中的password  命名为 desStr
       data.desStr = desEncrypt(JSON.stringify({ pStr: data.desStr }))
+      // request 为 import request from '@/api'
+      // fetchLogin 为 api\apis\login.js 中的方法
       return request.fetchLogin(data).then(res => {
+        // nextNeedCaptcha 下次登录是否需要验证码
         if (res.code === 200 && !res.data.nextNeedCaptcha) {
+          // 提交修改到 vuex 保存数据，分别使用 commit,dispatch.
+          // SET_USER 设置 用户和路由权限
           commit('SET_USER', res.data)
+          // fetchSetting为异步调用所以用dispatch
           dispatch('fetchSetting')
+          // config/FetchSitesOwnsite为异步调用所以用dispatch
+          // 命名空间action 操作根下的所有节点, 可以操作根及以下所有模块的mutations或actions从而改变其他模块的state
+          // config/FetchSitesOwnsite指定方法，true为参数，{ root: true }为配置，指定根下的所有节点
           dispatch('config/FetchSitesOwnsite', true, { root: true })
         }
         return res
@@ -227,6 +241,7 @@ export default {
     SetNeedChangePassword ({ commit }) {
       commit('SET_NCP', false)
     },
+    // 异步调用
     async fetchSetting ({ commit }) {
       request.fetchSystemSettingDetail().then(res => {
         if (res.code === 200) {

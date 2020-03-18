@@ -60,6 +60,7 @@ export default {
   },
   methods: {
     async querySearchAsync (queryString, cb) {
+      // await命令后面是一个 Promise 对象，返回该对象的结果。如果不是 Promise 对象，就直接返回对应的值。
       var results = queryString ? await this.createStateFilter(queryString) : []
       clearTimeout(this.timeout)
       this.timeout = setTimeout(() => {
