@@ -265,7 +265,6 @@ export default {
     init () {
       let _this = this
       if (_this.$refs.neditor) {
-
         _this.$nextTick(() => {
           _this.buttons.forEach(_this.$refs.neditor.registerButton)
           _this.$refs.neditor.registerButton(_this.wordBtn)

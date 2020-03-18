@@ -42,7 +42,7 @@ module.exports = {
         // changeOrigin: true,
         autoRewrite: true,
         cookieDomainRewrite: {
-          "*": ""
+          '*': ''
         },
         pathRewrite: {
           ['^' + process.env.VUE_APP_API_PREFIX]: ''

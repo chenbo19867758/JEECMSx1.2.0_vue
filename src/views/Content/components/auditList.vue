@@ -273,7 +273,7 @@ export default {
       var params = this.list.params
       this.searchHeader.searchItems
         .find(v => v.value === 'title').placeholder = '请输入' + this.keyOption
-        .find(d => d.value === params.keyType).label
+          .find(d => d.value === params.keyType).label
       this.list.params = params
       this.fetchContentApi()
     },

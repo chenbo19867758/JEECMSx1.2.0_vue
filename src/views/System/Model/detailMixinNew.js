@@ -235,7 +235,7 @@ export default {
           if (tab !== 'Base' && tempListBase.find(d => d.type === obj.type)) {
             this.data[`formList${tab}`].splice(newIndex, 1)
             isTrue = false
-          } else if (tab !== 'Extend' && tempListExtend.find(d => d.type === obj.type)){
+          } else if (tab !== 'Extend' && tempListExtend.find(d => d.type === obj.type)) {
             this.data[`formList${tab}`].splice(newIndex, 1)
             isTrue = false
           }
@@ -349,7 +349,6 @@ export default {
       // 判断加入的否是  内容 文档 多图
       if (this.data[`formList${tab}`][MergeIndex] instanceof Array || this.noMerge.indexOf(this.data[`formList${tab}`][MergeIndex].type) !== -1 || this.noMerge.indexOf(this.data[`formList${tab}`][index].type) !== -1) {
         this.$message.error('不能合并该字段')
-        return
       } else {
         let obj = deepClone(this.data[`formList${tab}`][index])
         let list = [[this.data[`formList${tab}`][MergeIndex]], [obj]]
@@ -442,7 +441,6 @@ export default {
               // 清除
               this.data[`formList${tab}`][indexs[0]].splice(indexs[1], 1)
             }
-
           } else {
             // 三级
             obj = deepClone(this.data[`formList${tab}`][indexs[0]][indexs[1]][indexs[2]])

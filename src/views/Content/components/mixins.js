@@ -1010,7 +1010,6 @@ export default {
       } else {
         this.msgChange('是否确定删除选中内容？', this.fetchContentextRubbish, ids)
       }
-
     },
     // 加入回收站
     fetchContentextRubbish (ids) {

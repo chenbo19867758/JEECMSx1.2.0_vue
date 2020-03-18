@@ -130,7 +130,7 @@ import draggable from 'vuedraggable'
 import EditorComponents from '@/components/draggable/Editor/components'
 import PreviewComponents from '@/components/draggable/Preview/components'
 export default {
-  name: "ModelTemplate",
+  name: 'ModelTemplate',
   components: {
     draggable,
     ...EditorComponents,

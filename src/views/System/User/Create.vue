@@ -94,7 +94,7 @@ export default {
             disabled: false,
             params: {
               id: this.$route.query.id
-            },
+            }
           },
           {
             type: 'Delete',
@@ -366,7 +366,7 @@ export default {
   },
   watch: {
     '$route': function (newRoute, oldRoute) {
-      this.headers.buttons.find(v=>v.type === 'Link').params.id = newRoute.query.id
+      this.headers.buttons.find(v => v.type === 'Link').params.id = newRoute.query.id
       if (newRoute.name === 'userCreate') {
         this.getUserData()
       }

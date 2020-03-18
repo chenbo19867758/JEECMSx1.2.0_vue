@@ -1,4 +1,4 @@
-import {deepClone} from "../../../utils";
+import { deepClone } from '../../../utils'
 
 export default {
   data () {
@@ -405,7 +405,7 @@ export default {
           this.telContents = contents
           columns.forEach(d => {
             if (d.options instanceof Array && d.options.length) {
-              that.templatesForm.form[`telColumns_${d.modelId}`] = that.templatesForm.form[`telColumns_${d.modelId}`] === '' ? d.options[0].value :that.templatesForm.form[`telColumns_${d.modelId}`]
+              that.templatesForm.form[`telColumns_${d.modelId}`] = that.templatesForm.form[`telColumns_${d.modelId}`] === '' ? d.options[0].value : that.templatesForm.form[`telColumns_${d.modelId}`]
             } else {
               that.templatesForm.form[`telColumns_${d.modelId}`] = ''
             }

@@ -47,7 +47,7 @@
     <!-- 说明文字 -->
     <div class="z-tip-form-item" v-if="tip">{{tip}}</div>
     <!-- 放大 -->
-    <el-dialog :visible.sync="dialogVisible" 
+    <el-dialog :visible.sync="dialogVisible"
     custom-class="transparent"
       class="image-preview-dialog "
       :close-on-click-modal="false"

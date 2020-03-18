@@ -240,7 +240,7 @@ export default {
     return {
       changeColumn: this.getChannlWrokflow,
       fetchContentDetail: this.fetchContentDetail,
-      changeCurrentTab: this.changeCurrentTab,
+      changeCurrentTab: this.changeCurrentTab
     }
   },
   data () {

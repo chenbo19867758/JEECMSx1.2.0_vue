@@ -70,7 +70,7 @@ export default {
           }])
         })
       }
-      console.log ("fetchMenusPermission()")
+      console.log('fetchMenusPermission()')
       return request.fetchMenusPermission().then(res => {
         if (res.code === 200) {
           const routes = res.data.menus.concat(exceptionRoutes)

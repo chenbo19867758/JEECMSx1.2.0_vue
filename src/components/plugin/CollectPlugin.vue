@@ -42,7 +42,7 @@ export default {
     },
     CollectPluginConfig: {
       deep: true,
-      handler: function(newVal, oldVal) {
+      handler: function (newVal, oldVal) {
         // 判断下版本是否一样
         if (parseFloat(this.CollectPluginConfig.version) > parseFloat(this.CollectConfig.version)) {
           this.updateShow = true
@@ -55,7 +55,7 @@ export default {
   methods: {
     // 获取插件信息
     getPlugin () {
-      this.$request.fetchCollectPlugin({name: 'CollectPlus'}).then(res => {
+      this.$request.fetchCollectPlugin({ name: 'CollectPlus' }).then(res => {
         this.loading = false
         if (res.code === 1) {
           this.CollectPluginConfig = res.data

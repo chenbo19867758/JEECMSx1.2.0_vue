@@ -3,9 +3,24 @@ import qs from 'qs'
 import { Message } from 'element-ui'
 import router from '@/routes'
 
+// axios
+// 基于promise用于浏览器和node.js的http客户端
+
+// 特点
+// 支持浏览器和node.js
+// 支持promise
+// 能拦截请求和响应
+// 能转换请求和响应数据
+// 能取消请求
+// 自动转换JSON数据
+// 浏览器端支持防止CSRF(跨站请求伪造)
+
+
 // 权限token
 const tokenKey = 'JEECMS-Auth-Token'
+// 创建一个实例 axios.create([config])  里面的参数就是config
 const request = axios.create({
+  // baseURL 如果url不是绝对路径，那么会将baseURL和url拼接作为请求的接口地址,用来区分不同环境，建议使用
   baseURL: process.env.VUE_APP_API_PREFIX,
   timeout: 50000,
   headers: {
@@ -25,9 +40,12 @@ const baseHeader = () => {
   }
 }
 
-// 请求拦截
+// 请求拦截器, axios.create([config])  config就是create后面的参数
 request.interceptors.request.use(config => {
+  // assign 合并 baseHeader(),config.headers到 config.headers中
+  // baseHeader()中包含有 token,在每次请求的时候都发送给后端。
   config.headers = Object.assign({}, baseHeader(), config.headers)
+  // 比如 axios.login(loginUrls.login, data)， 其中 loginUrls.login 就是 url
   if (!config.url) {
     Message.error({
       showClose: true,
@@ -37,6 +55,7 @@ request.interceptors.request.use(config => {
     })
   } else if (config.url.endsWith('/admin/login')) {
     config.headers['Content-Type'] = 'application/x-www-form-urlencoded'
+    // 将对象序列化，多个对象之间用&拼接（拼接是由底层处理，无需手动操作） qs.stringify()	转换成查询字符串
     config.data = qs.stringify(config.data)
   }
   return config
@@ -45,9 +64,10 @@ request.interceptors.request.use(config => {
   return Promise.reject(error)
 })
 
-// 请求拦截
+// 响应拦截器
 request.interceptors.response.use(response => {
   if (response.data.token && response.data.token !== '') {
+    // 访问响应后把token设置到 localStorage中
     localStorage.setItem(tokenKey, response.data.token)
   }
   return response
@@ -118,7 +138,7 @@ const requestLogin = axios.create({
   }
 })
 
-// 请求拦截
+// 登录用的请求实例-请求拦截器
 requestLogin.interceptors.request.use(config => {
   config.data = qs.stringify(config.data)
   return config
@@ -126,7 +146,7 @@ requestLogin.interceptors.request.use(config => {
   return Promise.reject(error)
 })
 
-// 请求拦截
+// 登录用的请求实例-响应拦截器
 requestLogin.interceptors.response.use(response => {
   return response
 }, error => {
@@ -144,6 +164,7 @@ requestLogin.interceptors.response.use(response => {
 })
 
 export default {
+  // 外部使用方式全部在前面加 axios.*** 如 axios.login, axios.upload
   request (config) {
     return axios.request(config).then(checkStatus).then(checkCode)
   },

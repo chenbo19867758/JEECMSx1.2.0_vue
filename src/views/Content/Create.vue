@@ -179,7 +179,6 @@ export default {
                 this.removeTab(this.$route.fullPath)
                 this.$routerLink('/content/index', 'list')
               }
-
             }
             this.loading = false
           }).catch(() => {

@@ -53,159 +53,159 @@
   </section>
 </template>
 <script>
-  import PasswordDialog from '@/components/dialog/PasswordDialog'
-  import {desEncrypt, desDecrypt} from '@/utils'
+import PasswordDialog from '@/components/dialog/PasswordDialog'
+import { desEncrypt, desDecrypt } from '@/utils'
 
-  import {
-    mapActions
-  } from 'vuex'
+import {
+  mapActions
+} from 'vuex'
 
-  export default {
-    name: 'login',
-    components: {
-      PasswordDialog
-    },
-    data () {
-      return {
-        loginImg: '',
-        loading: false,
-        showPassword: true,
-        nextNeedCaptcha: false,
-        captchaSrc: '',
-        focus: '',
-        form: {
-          identity: '',
-          desStr: '',
-          captcha: '',
-          sessionId: ''
-        },
-        rules: {
-          identity: [
-            this.$rules.required ()
-          ],
-          desStr: [
-            this.$rules.required ()
-          ],
-          captcha: [
-            this.$rules.required ()
-          ]
-        }
+export default {
+  name: 'login',
+  components: {
+    PasswordDialog
+  },
+  data () {
+    return {
+      loginImg: '',
+      loading: false,
+      showPassword: true,
+      nextNeedCaptcha: false,
+      captchaSrc: '',
+      focus: '',
+      form: {
+        identity: '',
+        desStr: '',
+        captcha: '',
+        sessionId: ''
+      },
+      rules: {
+        identity: [
+          this.$rules.required()
+        ],
+        desStr: [
+          this.$rules.required()
+        ],
+        captcha: [
+          this.$rules.required()
+        ]
       }
-    },
-    methods: {
-      desEncrypt,
-      desDecrypt,
-      // 参考文章 ...mapActions https://blog.csdn.net/Jasons_xie/article/details/89402662
-      // ... 是拓展运算符, [] 是解构赋值
-      //  函数返回的是一个对象,对象拓展运算符,将多个对象合并为一个
-      //  将 `this.fetchLogin()` 映射为 `this.$store.dispatch('fetchLogin')`
-      // 返回的是store\modules\app.js 中的 actions-> fetchLogin方法
-      // 命名空间方式引用
-      ...mapActions ('app', ['fetchLogin']),
-      onFocusUsername () {
-        this.focus = 'username'
-      },
-      onBlurUsername () {
-        this.focus = ''
-      },
-      onFocusPassword () {
-        this.focus = 'password'
-      },
-      onBlurPassword () {
-        this.focus = ''
-      },
-      onFocusCaptcha () {
-        this.focus = 'captcha'
-      },
-      onBlurCaptcha () {
-        this.focus = ''
-      },
-      fetchCaptcha () {
-        this.$request.fetchCode ().then (res => {
-          if (res.code === 200) {
-            this.captchaSrc = 'data:image/jpeg;base64,' + res.data.img
-            this.form.sessionId = res.data.sessionId
-          }
-        })
-      },
-      handleConfirm () {
-        this.$refs.form.validate (valid => {
-          if (valid) {
-            // const 声明常量
-            // Object.assign方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）。 Object.assign(target, source1, source2);
-            const data = Object.assign ({}, this.form)
-            this.handleFetchLogin (data)
-          }
-        })
-      },
-      // 判断单点登录
-      handleSsoLogin () {
-        this.$request.fetchSingleLogin ().then (res => {
-          if (res.code === 200 && res.data.open) {
-            const {loginUrl, appId, appSecret} = res.data
-            if (loginUrl) {
-              window.location.href = `${loginUrl}?id=${escape (appId)}&sec=${escape (appSecret)}&type=1&&origin=${escape (window.location.origin + window.location.pathname + '#/callback')}`
-            }
-          }
-        })
-      },
-      // 本地登录
-      handleFetchLogin (data) {
-        this.loading = true
-        // Promise 是异步编程
-        // 这里的this.fetchLogin (data) 实际调用的是由...mapActions ('app', ['fetchLogin']),定义的方法。
-        this.fetchLogin (data).then (res => {
-          // 成功后执行的方法
-          this.loading = false
-          if (res.code === 200) {
-            // nextNeedCaptcha 下次登录是否需要验证码
-            if (res.data.nextNeedCaptcha) {
-              this.nextNeedCaptcha = true
-              this.fetchCaptcha ()
-            } else if (res.data.needChangePassword) {
-              // 是否需要修改密码
-              this.$refs.passwordDialog.showDialog ()
-            } else {
-              // 登录成功则进入导航页面
-              this.onNavgate ()
-            }
-          }
-        }).catch (() => {
-          this.loading = false
-        })
-      },
-      handleSubmit () {
-        this.onNavgate ()
-      },
-      onNavgate () {
-        // lef{ ... } 解构赋值，获取路由url中?问号后面参数的值，这里指 redirect中的值，参考 https://www.jianshu.com/p/5deb7e90af76
-        // 可以写为 this.$route.query.redirect
-        let {redirect} = this.$route.query
-        console.log ("redirect：" + redirect)
-        // js 假值判断 空字符串为false,其他为true
-        if (redirect) {
-          console.log ('重定向到：', redirect)
-          //  this.$router.replace 跳转到指定的url，但是这个方法不会向history里面添加新的记录，点击返回，会跳转到上上一个页面。上一个记录是不存在的。
-          this.$router.replace (unescape (redirect))
-        } else {
-          console.log ('重定向到工作台')
-          this.$router.replace ('/workplace')
-        }
-      },
-      // 获取登录封面图片
-      LoginImgFun () {
-        this.$request.fetchRegisterGetImage ().then (res => {
-          if (res.code === 200) {
-            this.loginImg = res.data
-          }
-        })
-      }
-    },
-    mounted () {
-      this.LoginImgFun ()
-      this.handleSsoLogin ()
     }
+  },
+  methods: {
+    desEncrypt,
+    desDecrypt,
+    // 参考文章 ...mapActions https://blog.csdn.net/Jasons_xie/article/details/89402662
+    // ... 是拓展运算符, [] 是解构赋值
+    //  函数返回的是一个对象,对象拓展运算符,将多个对象合并为一个
+    //  将 `this.fetchLogin()` 映射为 `this.$store.dispatch('fetchLogin')`
+    // 返回的是store\modules\app.js 中的 actions-> fetchLogin方法
+    // 命名空间方式引用
+    ...mapActions('app', ['fetchLogin']),
+    onFocusUsername () {
+      this.focus = 'username'
+    },
+    onBlurUsername () {
+      this.focus = ''
+    },
+    onFocusPassword () {
+      this.focus = 'password'
+    },
+    onBlurPassword () {
+      this.focus = ''
+    },
+    onFocusCaptcha () {
+      this.focus = 'captcha'
+    },
+    onBlurCaptcha () {
+      this.focus = ''
+    },
+    fetchCaptcha () {
+      this.$request.fetchCode().then(res => {
+        if (res.code === 200) {
+          this.captchaSrc = 'data:image/jpeg;base64,' + res.data.img
+          this.form.sessionId = res.data.sessionId
+        }
+      })
+    },
+    handleConfirm () {
+      this.$refs.form.validate(valid => {
+        if (valid) {
+          // const 声明常量
+          // Object.assign方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）。 Object.assign(target, source1, source2);
+          const data = Object.assign({}, this.form)
+          this.handleFetchLogin(data)
+        }
+      })
+    },
+    // 判断单点登录
+    handleSsoLogin () {
+      this.$request.fetchSingleLogin().then(res => {
+        if (res.code === 200 && res.data.open) {
+          const { loginUrl, appId, appSecret } = res.data
+          if (loginUrl) {
+            window.location.href = `${loginUrl}?id=${escape(appId)}&sec=${escape(appSecret)}&type=1&&origin=${escape(window.location.origin + window.location.pathname + '#/callback')}`
+          }
+        }
+      })
+    },
+    // 本地登录
+    handleFetchLogin (data) {
+      this.loading = true
+      // Promise 是异步编程
+      // 这里的this.fetchLogin (data) 实际调用的是由...mapActions ('app', ['fetchLogin']),定义的方法。
+      this.fetchLogin(data).then(res => {
+        // 成功后执行的方法
+        this.loading = false
+        if (res.code === 200) {
+          // nextNeedCaptcha 下次登录是否需要验证码
+          if (res.data.nextNeedCaptcha) {
+            this.nextNeedCaptcha = true
+            this.fetchCaptcha()
+          } else if (res.data.needChangePassword) {
+            // 是否需要修改密码
+            this.$refs.passwordDialog.showDialog()
+          } else {
+            // 登录成功则进入导航页面
+            this.onNavgate()
+          }
+        }
+      }).catch(() => {
+        this.loading = false
+      })
+    },
+    handleSubmit () {
+      this.onNavgate()
+    },
+    onNavgate () {
+      // lef{ ... } 解构赋值，获取路由url中?问号后面参数的值，这里指 redirect中的值，参考 https://www.jianshu.com/p/5deb7e90af76
+      // 可以写为 this.$route.query.redirect
+      let { redirect } = this.$route.query
+      console.log('redirect：' + redirect)
+      // js 假值判断 空字符串为false,其他为true
+      if (redirect) {
+        console.log('重定向到：', redirect)
+        //  this.$router.replace 跳转到指定的url，但是这个方法不会向history里面添加新的记录，点击返回，会跳转到上上一个页面。上一个记录是不存在的。
+        this.$router.replace(unescape(redirect))
+      } else {
+        console.log('重定向到工作台')
+        this.$router.replace('/workplace')
+      }
+    },
+    // 获取登录封面图片
+    LoginImgFun () {
+      this.$request.fetchRegisterGetImage().then(res => {
+        if (res.code === 200) {
+          this.loginImg = res.data
+        }
+      })
+    }
+  },
+  mounted () {
+    this.LoginImgFun()
+    this.handleSsoLogin()
   }
+}
 </script>
 <style lang="scss">
   .login-container {

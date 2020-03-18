@@ -68,7 +68,7 @@ export default {
                 tempList.push(i)
               }
             })
-          } else if (tempList.indexOf(d) === -1){
+          } else if (tempList.indexOf(d) === -1) {
             tempList.push(d)
           }
         })

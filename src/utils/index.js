@@ -306,7 +306,7 @@ export function arrayFlat (arr) {
   for (var i = 0; i < arr.length; i++) {
     if (Array.isArray(arr[i])) {
       res = res.concat(arrayFlat(arr[i]))
-    }else{
+    } else {
       res.push(arr[i])
     }
   }
