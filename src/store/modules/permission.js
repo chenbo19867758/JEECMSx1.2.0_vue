@@ -53,9 +53,12 @@ export default {
       //   })
       // }
       // 上线时使用接口路由
+      // store\modules\app.js state里面有 menus: []
       const menus = rootState.app.menus
       if (menus instanceof Array && menus.length) {
         return new Promise(resolve => {
+          // exceptionRoutes 定义在 routes/index.js中的静态变量
+          // concat 拼接
           let accessedRoutes = filterAsyncRoutes(menus.concat(exceptionRoutes))
           commit('SET_ROUTES', [{
             ...rootRoute,
@@ -67,6 +70,7 @@ export default {
           }])
         })
       }
+      console.log ("fetchMenusPermission()")
       return request.fetchMenusPermission().then(res => {
         if (res.code === 200) {
           const routes = res.data.menus.concat(exceptionRoutes)

@@ -6,7 +6,9 @@ const getters = {
   routings: state => state.app.routings,
   config: state => state.config,
   system: state => state.system,
+  // 添加路由数据
   addRoutes: state => state.permission.addRoutes,
+  // 获取路由数据
   routes: state => state.permission.routes,
   memberInfo: state => state.system.member,
   userSecurityOptions: state => state.system.userSecurityOptions,

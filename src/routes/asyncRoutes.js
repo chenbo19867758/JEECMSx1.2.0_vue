@@ -1,5 +1,10 @@
 /* eslint-disable quotes */
-// 开发时使用，模拟后台返回的数据
+// 开发时用的数据，调用方式查看 routes\permission.js GenerateRoutes方法
+// 开发时使用，模拟后台返回的数据。正式上线调用后台数据时不会用到这个数据。
+// 这里没有component是因为
+// routes\index.js filterAsyncRoutes方法中会调用。
+// rt.component = () => import(`@/${routeMap[rt.name]}`)
+// 给路由添加 component
 export default [
   // 工作台
   {

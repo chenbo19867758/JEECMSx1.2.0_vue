@@ -158,12 +158,15 @@
           // 成功后执行的方法
           this.loading = false
           if (res.code === 200) {
+            // nextNeedCaptcha 下次登录是否需要验证码
             if (res.data.nextNeedCaptcha) {
               this.nextNeedCaptcha = true
               this.fetchCaptcha ()
             } else if (res.data.needChangePassword) {
+              // 是否需要修改密码
               this.$refs.passwordDialog.showDialog ()
             } else {
+              // 登录成功则进入导航页面
               this.onNavgate ()
             }
           }
@@ -175,12 +178,14 @@
         this.onNavgate ()
       },
       onNavgate () {
-        // lef{ ... } 解构赋值
+        // lef{ ... } 解构赋值，获取路由url中?问号后面参数的值，这里指 redirect中的值，参考 https://www.jianshu.com/p/5deb7e90af76
+        // 可以写为 this.$route.query.redirect
         let {redirect} = this.$route.query
         console.log ("redirect：" + redirect)
         // js 假值判断 空字符串为false,其他为true
         if (redirect) {
           console.log ('重定向到：', redirect)
+          //  this.$router.replace 跳转到指定的url，但是这个方法不会向history里面添加新的记录，点击返回，会跳转到上上一个页面。上一个记录是不存在的。
           this.$router.replace (unescape (redirect))
         } else {
           console.log ('重定向到工作台')

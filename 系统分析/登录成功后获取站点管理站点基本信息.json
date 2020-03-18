@@ -1,0 +1,46 @@
+{
+  "code": 200,
+  "data": {
+    "alias": [
+      {
+        "herf": "192.168.0.185"
+      },
+      {
+        "herf": ""
+      },
+      {
+        "herf": "192.168.0.173"
+      }
+    ],
+    "deleteAble": false,
+    "description": "1",
+    "domain": "demo.jeecms.com",
+    "domainAlias": "192.168.0.185,,192.168.0.173",
+    "editAble": true,
+    "iconId": null,
+    "iconPath": "",
+    "id": 1,
+    "isOpen": true,
+    "name": "jeecms演示站",
+    "newChildAble": true,
+    "nodeSiteIds": [],
+    "openCloseAble": true,
+    "parentId": null,
+    "path": "www",
+    "permAssignAble": true,
+    "previewUrl": "http://demo.jeecms.com/preview?siteId=1&type=site",
+    "protocol": "http://",
+    "seoDescription": "JEECMS-国内优秀的JAVA(JSP)网站内容管理系统",
+    "seoKeyword": "CMS,JEECMS,网站群,开源,java,内容管理系统,jsp cms网站管理,网站群管理系统",
+    "seoTitle": "JEECMS内容网站群管理系统",
+    "siteLanguage": "zh_CN",
+    "staticAble": true,
+    "url": "http://demo.jeecms.com/",
+    "viewAble": true
+  },
+  "message": "操作成功",
+  "redirectUrl": "",
+  "requestUrl": "",
+  "timestamp": "2020-03-18 11:51:20",
+  "token": ""
+}

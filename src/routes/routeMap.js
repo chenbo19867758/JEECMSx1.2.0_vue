@@ -1,3 +1,7 @@
+
+// 这文件使用的地方。  routes\index.js filterAsyncRoutes方法中会调用。
+// rt.component = () => import(`@/${routeMap[rt.name]}`)
+// 给路由添加 component
 /* eslint-disable quotes */
 export default {
   // 登录

@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="app-container">
+    <!--这里的 <router-view> 是最顶层的出口，router-view 没有设置名字，那么默认为 default-->
     <router-view />
   </div>
 </template>

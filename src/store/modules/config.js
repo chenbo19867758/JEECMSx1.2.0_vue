@@ -31,6 +31,7 @@ export default {
     },
     // 有管理权限的站点列表
     SET_OSO: (state, data) => {
+      // loopOptions转换级联下拉数据
       state.ownSiteOptions = loopOptions(data)
     },
     // 站点id
@@ -98,9 +99,10 @@ export default {
         })
       }
     },
-    // 有管理权限的站点列表
+    // 有管理权限的站点列表，reflush：是否刷新
     FetchSitesOwnsite ({ commit, state, dispatch }, reflush) {
       if ((state.ownSiteOptions && !state.ownSiteOptions.length) || reflush) {
+        // 获取可管理的站点列表
         request.fetchSitesOwnsite().then(res => {
           if (res.code === 200 && res.data instanceof Array) {
             commit('SET_OSO', res.data)
@@ -112,6 +114,7 @@ export default {
                 name: siteName
               } : res.data[0]
               commit('SET_SITE', site)
+              // store\modules\config.js
               dispatch('FetchSiteExtentConfig', site.id)
               dispatch('FetchSiteBaseConfig', site.id)
             }

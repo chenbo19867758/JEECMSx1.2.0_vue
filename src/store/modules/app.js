@@ -122,12 +122,17 @@ export default {
     },
     // 用户和路由权限
     SET_USER (state, data) {
-      // 结构复制
+      // 数据结构查看 系统分析\登录成功返回数据.json
+      // 结构赋值，有命名为auth属性，propData为其他数据的集合
       const { auth, ...propData } = data
+      // 结构赋值，有命名为menus，routings属性，user为其他数据的集合
       const { menus, routings, ...user } = auth
+      // state.user, user数组, propData数组 组合成一个新对象重新设置到 state.user中
+      // 相当于 data中除去了 menus菜单，routings路由数据存到state.user中
       state.user = Object.assign({}, state.user, user, propData)
       state.menus = menus || []
       state.routings = routings || []
+      // 设置本地缓存
       if (propData['JEECMS-Auth-Token']) window.localStorage.setItem('JEECMS-Auth-Token', propData['JEECMS-Auth-Token'])
       if (propData['siteId']) window.localStorage.setItem('siteId', propData['siteId'])
       if (propData['siteName']) window.localStorage.setItem('siteName', propData['siteName'])
@@ -156,9 +161,11 @@ export default {
     UPDATE_ROUTINGS (state, data) {
       state.routings = data || []
     },
-    // 系统设置
+    // 系统设置，登录成功后从后台返回的数据缓存到store中
     SET_SETTING (state, data) {
       state.setting = data
+      // 这里的主要目的是设置ico
+      // "systemFlagResourceUrl": "/u/cms/www/201912/05141941d5gu.ico",
       if (data.attrs && data.attrs.systemFlagResourceUrl) {
         const href = getImageUrl(data.attrs.systemFlagResourceUrl)
         var link = document.querySelector("link[rel*='icon']") || document.createElement('link')
@@ -202,9 +209,9 @@ export default {
         // nextNeedCaptcha 下次登录是否需要验证码
         if (res.code === 200 && !res.data.nextNeedCaptcha) {
           // 提交修改到 vuex 保存数据，分别使用 commit,dispatch.
-          // SET_USER 设置 用户和路由权限
+          // SET_USER 设置 用户和路由权限，保存到localStorage中
           commit('SET_USER', res.data)
-          // fetchSetting为异步调用所以用dispatch
+          // fetchSetting为异步调用所以用dispatch，fetchSetting主要是设置ico图标可以不管
           dispatch('fetchSetting')
           // config/FetchSitesOwnsite为异步调用所以用dispatch
           // 命名空间action 操作根下的所有节点, 可以操作根及以下所有模块的mutations或actions从而改变其他模块的state
@@ -243,6 +250,7 @@ export default {
     },
     // 异步调用
     async fetchSetting ({ commit }) {
+      // 获取系统配置信息 api\apis\system.js 中的方法
       request.fetchSystemSettingDetail().then(res => {
         if (res.code === 200) {
           commit('SET_SETTING', res.data)
