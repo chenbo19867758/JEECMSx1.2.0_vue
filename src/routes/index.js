@@ -6,6 +6,7 @@ import routeMap from '@/routes/routeMap'
 
 Vue.use(Router)
 
+// 过滤异步的路由-递归处理
 export function filterAsyncRoutes (routes) {
   let routeList = []
   const loop = (routes, parentPath = '/') => {
@@ -101,5 +102,5 @@ export const createRouter = routes => new Router({
 // routes\permission.js router.beforeEach 动态添加路由 router.addRoutes(routes)
 const routes = store.getters.routes.length ? store.getters.routes : constantRoutes
 const router = createRouter(filterAsyncRoutes(routes))
-console.log(routes, router)
+console.log("router=====:"+JSON.stringify(filterAsyncRoutes(routes)));
 export default router

@@ -36,7 +36,7 @@ export default {
   },
   actions: {
     GenerateRoutes ({ commit, rootState, dispatch }) {
-      // 开发时使用本地路由数据
+      // =====开发时使用本地路由数据
       // const openPermission = window.localStorage.getItem('openPermission')
       // if (openPermission !== '1') {
       //   return new Promise(resolve => {
@@ -52,7 +52,7 @@ export default {
       //     }])
       //   })
       // }
-      // 上线时使用接口路由
+      // =====上线时使用接口路由
       // store\modules\app.js state里面有 menus: []
       const menus = rootState.app.menus
       if (menus instanceof Array && menus.length) {
@@ -75,6 +75,10 @@ export default {
         if (res.code === 200) {
           const routes = res.data.menus.concat(exceptionRoutes)
           let accessedRoutes = filterAsyncRoutes(routes)
+
+          //console.log("accessedRoutes:"+JSON.SON.stringify(accessedRoutes));
+
+          // 这里登陆成功后会返回json数据，数据里包括menus接口，查看"登录成功返回数据.json"文件
           const { perms, menus, ...propData } = res.data
           commit('SET_ROUTES', [{
             ...rootRoute,

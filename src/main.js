@@ -19,6 +19,9 @@ import Viser from 'viser-vue'
 
 Vue.use(Viser)
 Vue.config.productionTip = false
+
+Vue.config.devtools = true
+
 Vue.use(ElementUI, {
   i18n: (key, value) => i18n.t(key, value)
 })
