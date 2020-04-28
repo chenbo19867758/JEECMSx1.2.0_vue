@@ -49,6 +49,7 @@
             <el-checkbox
               class="ct-box__cont"
               :label="getPropText(item,rowKey)" >
+              <!-- 显示标题-->
               <div
                 v-for="(col,colIndex) in columns" :key="colIndex"
                 class="ct-box__item"
@@ -61,10 +62,11 @@
                   [{{item.quote?item.quoteChannelName:(item.cmsContent?item.cmsContent.channelName:getPropText(item,col.prop))}}]</span>
                 <span v-else-if="col.scopeType === 'time'" >{{$moment(getPropText(item,col.prop))}}</span>
                 <span v-else-if="col.scopeType === 'status'" >{{filterStatus(col,getPropText(item,col.prop))}}</span>
+                <!-- 显示标题222-->
                 <span
                   @click="getDetailPush(col,item)"
                   v-else-if="col.scopeType === 'link'"
-                  class="jee-hover-color">{{getPropText(item,col.prop)}}</span>
+                  class="jee-hover-color">{{getPropText(item,col.prop)}}ddd</span>
                 <span v-else-if="!col.scopeType">{{getPropText(item,col.prop)}}</span>
               </div>
             </el-checkbox>
@@ -198,6 +200,7 @@
           v-show="data.length === 0">暂无数据</div>
       </ul>
       <div class="ct-footer" >
+<!--    el-pagination使用说明    https://element.eleme.cn/#/zh-CN/component/pagination#dai-you-bei-jing-se-de-fen-ye-->
         <el-pagination
           v-if="showPagination"
           class="ct-pagination"
@@ -342,6 +345,7 @@ export default {
       dropdownClass: {}
     }
   },
+  // watch的作用可以监控一个值的变换，并调用因为变化需要执行的方法。可以通过watch动态改变关联的状态。
   watch: {
     ids (newVal, oldVal) {
       if (newVal !== oldVal) {

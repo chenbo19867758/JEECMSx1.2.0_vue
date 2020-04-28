@@ -1,0 +1,9 @@
+/admin/contentext/page   分页列表内容
+/admin/contentType/page  下拉限定条件
+/admin/contentext/chack/amount?channelId=1755
+/admin/channel/workflow/being/1755
+/admin/channel/content/common/tree?permOut=false&operator=2&siteId=&name=  栏目数树形结构
+/admin/wechatInfo/list?type=1
+/admin/weiboinfo/list
+/admin/contentext/orders
+/admin/content/model/list?channelId=1755

@@ -208,7 +208,7 @@
                 :style="item.style||{minWidth:'70px',padding:'8px'}"
                 :class='item.btnClass'
                 @click="handleClickSenior(item)"
-                type="primary">{{params[item.value]?(item.hideText||'收起'):(item.openText||'高级搜索...')}}</el-button>
+                type="primary">{{params[item.value]?(item.hideText||'收起'):(item.openText||'高级搜索TestBobo...')}}</el-button>
             </template>
             <!-- 切换按钮 -->
             <template v-else-if="item.type === 'cutButton'">

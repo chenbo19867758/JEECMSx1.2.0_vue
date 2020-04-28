@@ -1,0 +1,957 @@
+{
+  "code": 200,
+  "data": {
+    "content": [
+      {
+        "channelId": 1752,
+        "cmsContent": {
+          "channelId": 1752,
+          "channelName": "要闻",
+          "contentTypes": [],
+          "copyName": "",
+          "createTime": "2020-04-20 14:19:51",
+          "createUser": "system",
+          "id": 36521,
+          "model": {
+            "id": 912,
+            "modelName": "新闻"
+          },
+          "previewUrl": "http://localhost/preview?contentId=36521&type=content",
+          "quoteChannel": [],
+          "quoteChannelIds": [],
+          "releaseTime": "2020-04-20 14:19:39",
+          "status": 5,
+          "title": "哈尔滨图书馆下雪",
+          "top": false,
+          "topEndTime": null,
+          "topStartTime": null,
+          "urlWhole": "http://localhost/yw/36521"
+        },
+        "createType": 1,
+        "currentNodeName": "",
+        "operations": {
+          "ADD": true,
+          "QUOTE": true,
+          "SITE": true,
+          "PIGEONHOLE": true,
+          "CONTENTTYPE": true,
+          "WECHAT": true,
+          "STICK": true,
+          "COPY": true,
+          "PUBLISH": true,
+          "VIEW": true,
+          "SINA": true,
+          "DELETE": true,
+          "MOVE": true,
+          "SORT": true,
+          "UPDATE": true,
+          "PREVIEW": true,
+          "OFFLINE": true
+        },
+        "quote": false,
+        "quoteChannelName": "",
+        "status": 5,
+        "types": [
+          {
+            "id": 148,
+            "logo": "",
+            "operation": true,
+            "typeName": "热门"
+          },
+          {
+            "id": 149,
+            "logo": "",
+            "operation": true,
+            "typeName": "头条"
+          },
+          {
+            "id": 175,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推"
+          },
+          {
+            "id": 186,
+            "logo": "",
+            "operation": true,
+            "typeName": "焦点"
+          },
+          {
+            "id": 215,
+            "logo": "",
+            "operation": true,
+            "typeName": "猜你喜欢"
+          },
+          {
+            "id": 224,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推-中"
+          },
+          {
+            "id": 263,
+            "logo": "",
+            "operation": true,
+            "typeName": "首页要闻"
+          }
+        ]
+      },
+      {
+        "channelId": 1752,
+        "cmsContent": {
+          "channelId": 1752,
+          "channelName": "要闻",
+          "contentTypes": [],
+          "copyName": "",
+          "createTime": "2020-04-20 14:19:21",
+          "createUser": "system",
+          "id": 36520,
+          "model": {
+            "id": 912,
+            "modelName": "新闻"
+          },
+          "previewUrl": "http://localhost/preview?contentId=36520&type=content",
+          "quoteChannel": [],
+          "quoteChannelIds": [],
+          "releaseTime": "2020-04-20 14:19:09",
+          "status": 5,
+          "title": "吴忠图书馆翻新",
+          "top": false,
+          "topEndTime": null,
+          "topStartTime": null,
+          "urlWhole": "http://localhost/yw/36520"
+        },
+        "createType": 1,
+        "currentNodeName": "",
+        "operations": {
+          "ADD": true,
+          "QUOTE": true,
+          "SITE": true,
+          "PIGEONHOLE": true,
+          "CONTENTTYPE": true,
+          "WECHAT": true,
+          "STICK": true,
+          "COPY": true,
+          "PUBLISH": true,
+          "VIEW": true,
+          "SINA": true,
+          "DELETE": true,
+          "MOVE": true,
+          "SORT": true,
+          "UPDATE": true,
+          "PREVIEW": true,
+          "OFFLINE": true
+        },
+        "quote": false,
+        "quoteChannelName": "",
+        "status": 5,
+        "types": [
+          {
+            "id": 148,
+            "logo": "",
+            "operation": true,
+            "typeName": "热门"
+          },
+          {
+            "id": 149,
+            "logo": "",
+            "operation": true,
+            "typeName": "头条"
+          },
+          {
+            "id": 175,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推"
+          },
+          {
+            "id": 186,
+            "logo": "",
+            "operation": true,
+            "typeName": "焦点"
+          },
+          {
+            "id": 215,
+            "logo": "",
+            "operation": true,
+            "typeName": "猜你喜欢"
+          },
+          {
+            "id": 224,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推-中"
+          },
+          {
+            "id": 263,
+            "logo": "",
+            "operation": true,
+            "typeName": "首页要闻"
+          }
+        ]
+      },
+      {
+        "channelId": 1752,
+        "cmsContent": {
+          "channelId": 1752,
+          "channelName": "要闻",
+          "contentTypes": [],
+          "copyName": "",
+          "createTime": "2020-04-20 14:19:04",
+          "createUser": "system",
+          "id": 36519,
+          "model": {
+            "id": 912,
+            "modelName": "新闻"
+          },
+          "previewUrl": "http://localhost/preview?contentId=36519&type=content",
+          "quoteChannel": [],
+          "quoteChannelIds": [],
+          "releaseTime": "2020-04-20 14:18:53",
+          "status": 5,
+          "title": "宁夏图书馆过节",
+          "top": false,
+          "topEndTime": null,
+          "topStartTime": null,
+          "urlWhole": "http://localhost/yw/36519"
+        },
+        "createType": 1,
+        "currentNodeName": "",
+        "operations": {
+          "ADD": true,
+          "QUOTE": true,
+          "SITE": true,
+          "PIGEONHOLE": true,
+          "CONTENTTYPE": true,
+          "WECHAT": true,
+          "STICK": true,
+          "COPY": true,
+          "PUBLISH": true,
+          "VIEW": true,
+          "SINA": true,
+          "DELETE": true,
+          "MOVE": true,
+          "SORT": true,
+          "UPDATE": true,
+          "PREVIEW": true,
+          "OFFLINE": true
+        },
+        "quote": false,
+        "quoteChannelName": "",
+        "status": 5,
+        "types": [
+          {
+            "id": 148,
+            "logo": "",
+            "operation": true,
+            "typeName": "热门"
+          },
+          {
+            "id": 149,
+            "logo": "",
+            "operation": true,
+            "typeName": "头条"
+          },
+          {
+            "id": 175,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推"
+          },
+          {
+            "id": 186,
+            "logo": "",
+            "operation": true,
+            "typeName": "焦点"
+          },
+          {
+            "id": 215,
+            "logo": "",
+            "operation": true,
+            "typeName": "猜你喜欢"
+          },
+          {
+            "id": 224,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推-中"
+          },
+          {
+            "id": 263,
+            "logo": "",
+            "operation": true,
+            "typeName": "首页要闻"
+          }
+        ]
+      },
+      {
+        "channelId": 1752,
+        "cmsContent": {
+          "channelId": 1752,
+          "channelName": "要闻",
+          "contentTypes": [],
+          "copyName": "",
+          "createTime": "2020-04-20 14:18:48",
+          "createUser": "system",
+          "id": 36518,
+          "model": {
+            "id": 912,
+            "modelName": "新闻"
+          },
+          "previewUrl": "http://localhost/preview?contentId=36518&type=content",
+          "quoteChannel": [],
+          "quoteChannelIds": [],
+          "releaseTime": "2020-04-20 14:18:35",
+          "status": 5,
+          "title": "北海图书馆上线",
+          "top": false,
+          "topEndTime": null,
+          "topStartTime": null,
+          "urlWhole": "http://localhost/yw/36518"
+        },
+        "createType": 1,
+        "currentNodeName": "",
+        "operations": {
+          "ADD": true,
+          "QUOTE": true,
+          "SITE": true,
+          "PIGEONHOLE": true,
+          "CONTENTTYPE": true,
+          "WECHAT": true,
+          "STICK": true,
+          "COPY": true,
+          "PUBLISH": true,
+          "VIEW": true,
+          "SINA": true,
+          "DELETE": true,
+          "MOVE": true,
+          "SORT": true,
+          "UPDATE": true,
+          "PREVIEW": true,
+          "OFFLINE": true
+        },
+        "quote": false,
+        "quoteChannelName": "",
+        "status": 5,
+        "types": [
+          {
+            "id": 148,
+            "logo": "",
+            "operation": true,
+            "typeName": "热门"
+          },
+          {
+            "id": 149,
+            "logo": "",
+            "operation": true,
+            "typeName": "头条"
+          },
+          {
+            "id": 175,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推"
+          },
+          {
+            "id": 186,
+            "logo": "",
+            "operation": true,
+            "typeName": "焦点"
+          },
+          {
+            "id": 215,
+            "logo": "",
+            "operation": true,
+            "typeName": "猜你喜欢"
+          },
+          {
+            "id": 224,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推-中"
+          },
+          {
+            "id": 263,
+            "logo": "",
+            "operation": true,
+            "typeName": "首页要闻"
+          }
+        ]
+      },
+      {
+        "channelId": 1752,
+        "cmsContent": {
+          "channelId": 1752,
+          "channelName": "要闻",
+          "contentTypes": [],
+          "copyName": "",
+          "createTime": "2020-04-20 14:18:28",
+          "createUser": "system",
+          "id": 36517,
+          "model": {
+            "id": 912,
+            "modelName": "新闻"
+          },
+          "previewUrl": "http://localhost/preview?contentId=36517&type=content",
+          "quoteChannel": [],
+          "quoteChannelIds": [],
+          "releaseTime": "2020-04-20 14:18:16",
+          "status": 5,
+          "title": "数字图书馆新版本发布",
+          "top": false,
+          "topEndTime": null,
+          "topStartTime": null,
+          "urlWhole": "http://localhost/yw/36517"
+        },
+        "createType": 1,
+        "currentNodeName": "",
+        "operations": {
+          "ADD": true,
+          "QUOTE": true,
+          "SITE": true,
+          "PIGEONHOLE": true,
+          "CONTENTTYPE": true,
+          "WECHAT": true,
+          "STICK": true,
+          "COPY": true,
+          "PUBLISH": true,
+          "VIEW": true,
+          "SINA": true,
+          "DELETE": true,
+          "MOVE": true,
+          "SORT": true,
+          "UPDATE": true,
+          "PREVIEW": true,
+          "OFFLINE": true
+        },
+        "quote": false,
+        "quoteChannelName": "",
+        "status": 5,
+        "types": [
+          {
+            "id": 148,
+            "logo": "",
+            "operation": true,
+            "typeName": "热门"
+          },
+          {
+            "id": 149,
+            "logo": "",
+            "operation": true,
+            "typeName": "头条"
+          },
+          {
+            "id": 175,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推"
+          },
+          {
+            "id": 186,
+            "logo": "",
+            "operation": true,
+            "typeName": "焦点"
+          },
+          {
+            "id": 215,
+            "logo": "",
+            "operation": true,
+            "typeName": "猜你喜欢"
+          },
+          {
+            "id": 224,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推-中"
+          },
+          {
+            "id": 263,
+            "logo": "",
+            "operation": true,
+            "typeName": "首页要闻"
+          }
+        ]
+      },
+      {
+        "channelId": 1752,
+        "cmsContent": {
+          "channelId": 1752,
+          "channelName": "要闻",
+          "contentTypes": [],
+          "copyName": "",
+          "createTime": "2020-04-20 14:17:50",
+          "createUser": "system",
+          "id": 36516,
+          "model": {
+            "id": 912,
+            "modelName": "新闻"
+          },
+          "previewUrl": "http://localhost/preview?contentId=36516&type=content",
+          "quoteChannel": [],
+          "quoteChannelIds": [],
+          "releaseTime": "2020-04-20 14:17:35",
+          "status": 5,
+          "title": "崇左图书馆新系统上线",
+          "top": false,
+          "topEndTime": null,
+          "topStartTime": null,
+          "urlWhole": "http://localhost/yw/36516"
+        },
+        "createType": 1,
+        "currentNodeName": "",
+        "operations": {
+          "ADD": true,
+          "QUOTE": true,
+          "SITE": true,
+          "PIGEONHOLE": true,
+          "CONTENTTYPE": true,
+          "WECHAT": true,
+          "STICK": true,
+          "COPY": true,
+          "PUBLISH": true,
+          "VIEW": true,
+          "SINA": true,
+          "DELETE": true,
+          "MOVE": true,
+          "SORT": true,
+          "UPDATE": true,
+          "PREVIEW": true,
+          "OFFLINE": true
+        },
+        "quote": false,
+        "quoteChannelName": "",
+        "status": 5,
+        "types": [
+          {
+            "id": 148,
+            "logo": "",
+            "operation": true,
+            "typeName": "热门"
+          },
+          {
+            "id": 149,
+            "logo": "",
+            "operation": true,
+            "typeName": "头条"
+          },
+          {
+            "id": 175,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推"
+          },
+          {
+            "id": 186,
+            "logo": "",
+            "operation": true,
+            "typeName": "焦点"
+          },
+          {
+            "id": 215,
+            "logo": "",
+            "operation": true,
+            "typeName": "猜你喜欢"
+          },
+          {
+            "id": 224,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推-中"
+          },
+          {
+            "id": 263,
+            "logo": "",
+            "operation": true,
+            "typeName": "首页要闻"
+          }
+        ]
+      },
+      {
+        "channelId": 1752,
+        "cmsContent": {
+          "channelId": 1752,
+          "channelName": "要闻",
+          "contentTypes": [],
+          "copyName": "",
+          "createTime": "2020-04-20 14:17:24",
+          "createUser": "system",
+          "id": 36515,
+          "model": {
+            "id": 912,
+            "modelName": "新闻"
+          },
+          "previewUrl": "http://localhost/preview?contentId=36515&type=content",
+          "quoteChannel": [],
+          "quoteChannelIds": [],
+          "releaseTime": "2020-04-20 14:17:08",
+          "status": 5,
+          "title": "广西图书馆三月三活动",
+          "top": false,
+          "topEndTime": null,
+          "topStartTime": null,
+          "urlWhole": "http://localhost/yw/36515"
+        },
+        "createType": 1,
+        "currentNodeName": "",
+        "operations": {
+          "ADD": true,
+          "QUOTE": true,
+          "SITE": true,
+          "PIGEONHOLE": true,
+          "CONTENTTYPE": true,
+          "WECHAT": true,
+          "STICK": true,
+          "COPY": true,
+          "PUBLISH": true,
+          "VIEW": true,
+          "SINA": true,
+          "DELETE": true,
+          "MOVE": true,
+          "SORT": true,
+          "UPDATE": true,
+          "PREVIEW": true,
+          "OFFLINE": true
+        },
+        "quote": false,
+        "quoteChannelName": "",
+        "status": 5,
+        "types": [
+          {
+            "id": 148,
+            "logo": "",
+            "operation": true,
+            "typeName": "热门"
+          },
+          {
+            "id": 149,
+            "logo": "",
+            "operation": true,
+            "typeName": "头条"
+          },
+          {
+            "id": 175,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推"
+          },
+          {
+            "id": 186,
+            "logo": "",
+            "operation": true,
+            "typeName": "焦点"
+          },
+          {
+            "id": 215,
+            "logo": "",
+            "operation": true,
+            "typeName": "猜你喜欢"
+          },
+          {
+            "id": 224,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推-中"
+          },
+          {
+            "id": 263,
+            "logo": "",
+            "operation": true,
+            "typeName": "首页要闻"
+          }
+        ]
+      },
+      {
+        "channelId": 1752,
+        "cmsContent": {
+          "channelId": 1752,
+          "channelName": "要闻",
+          "contentTypes": [],
+          "copyName": "",
+          "createTime": "2020-04-20 14:17:03",
+          "createUser": "system",
+          "id": 36514,
+          "model": {
+            "id": 912,
+            "modelName": "新闻"
+          },
+          "previewUrl": "http://localhost/preview?contentId=36514&type=content",
+          "quoteChannel": [],
+          "quoteChannelIds": [],
+          "releaseTime": "2020-04-20 14:16:49",
+          "status": 5,
+          "title": "重庆图书馆抗议",
+          "top": false,
+          "topEndTime": null,
+          "topStartTime": null,
+          "urlWhole": "http://localhost/yw/36514"
+        },
+        "createType": 1,
+        "currentNodeName": "",
+        "operations": {
+          "ADD": true,
+          "QUOTE": true,
+          "SITE": true,
+          "PIGEONHOLE": true,
+          "CONTENTTYPE": true,
+          "WECHAT": true,
+          "STICK": true,
+          "COPY": true,
+          "PUBLISH": true,
+          "VIEW": true,
+          "SINA": true,
+          "DELETE": true,
+          "MOVE": true,
+          "SORT": true,
+          "UPDATE": true,
+          "PREVIEW": true,
+          "OFFLINE": true
+        },
+        "quote": false,
+        "quoteChannelName": "",
+        "status": 5,
+        "types": [
+          {
+            "id": 148,
+            "logo": "",
+            "operation": true,
+            "typeName": "热门"
+          },
+          {
+            "id": 149,
+            "logo": "",
+            "operation": true,
+            "typeName": "头条"
+          },
+          {
+            "id": 175,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推"
+          },
+          {
+            "id": 186,
+            "logo": "",
+            "operation": true,
+            "typeName": "焦点"
+          },
+          {
+            "id": 215,
+            "logo": "",
+            "operation": true,
+            "typeName": "猜你喜欢"
+          },
+          {
+            "id": 224,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推-中"
+          },
+          {
+            "id": 263,
+            "logo": "",
+            "operation": true,
+            "typeName": "首页要闻"
+          }
+        ]
+      },
+      {
+        "channelId": 1752,
+        "cmsContent": {
+          "channelId": 1752,
+          "channelName": "要闻",
+          "contentTypes": [],
+          "copyName": "",
+          "createTime": "2020-04-20 14:16:43",
+          "createUser": "system",
+          "id": 36513,
+          "model": {
+            "id": 912,
+            "modelName": "新闻"
+          },
+          "previewUrl": "http://localhost/preview?contentId=36513&type=content",
+          "quoteChannel": [],
+          "quoteChannelIds": [],
+          "releaseTime": "2020-04-20 14:16:32",
+          "status": 5,
+          "title": "渝中区图书馆少儿活动",
+          "top": false,
+          "topEndTime": null,
+          "topStartTime": null,
+          "urlWhole": "http://localhost/yw/36513"
+        },
+        "createType": 1,
+        "currentNodeName": "",
+        "operations": {
+          "ADD": true,
+          "QUOTE": true,
+          "SITE": true,
+          "PIGEONHOLE": true,
+          "CONTENTTYPE": true,
+          "WECHAT": true,
+          "STICK": true,
+          "COPY": true,
+          "PUBLISH": true,
+          "VIEW": true,
+          "SINA": true,
+          "DELETE": true,
+          "MOVE": true,
+          "SORT": true,
+          "UPDATE": true,
+          "PREVIEW": true,
+          "OFFLINE": true
+        },
+        "quote": false,
+        "quoteChannelName": "",
+        "status": 5,
+        "types": [
+          {
+            "id": 148,
+            "logo": "",
+            "operation": true,
+            "typeName": "热门"
+          },
+          {
+            "id": 149,
+            "logo": "",
+            "operation": true,
+            "typeName": "头条"
+          },
+          {
+            "id": 175,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推"
+          },
+          {
+            "id": 186,
+            "logo": "",
+            "operation": true,
+            "typeName": "焦点"
+          },
+          {
+            "id": 215,
+            "logo": "",
+            "operation": true,
+            "typeName": "猜你喜欢"
+          },
+          {
+            "id": 224,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推-中"
+          },
+          {
+            "id": 263,
+            "logo": "",
+            "operation": true,
+            "typeName": "首页要闻"
+          }
+        ]
+      },
+      {
+        "channelId": 1752,
+        "cmsContent": {
+          "channelId": 1752,
+          "channelName": "要闻",
+          "contentTypes": [],
+          "copyName": "",
+          "createTime": "2020-04-20 14:16:21",
+          "createUser": "system",
+          "id": 36512,
+          "model": {
+            "id": 912,
+            "modelName": "新闻"
+          },
+          "previewUrl": "http://localhost/preview?contentId=36512&type=content",
+          "quoteChannel": [],
+          "quoteChannelIds": [],
+          "releaseTime": "2020-04-20 14:15:57",
+          "status": 5,
+          "title": "图书馆开馆了",
+          "top": false,
+          "topEndTime": null,
+          "topStartTime": null,
+          "urlWhole": "http://localhost/yw/36512"
+        },
+        "createType": 1,
+        "currentNodeName": "",
+        "operations": {
+          "ADD": true,
+          "QUOTE": true,
+          "SITE": true,
+          "PIGEONHOLE": true,
+          "CONTENTTYPE": true,
+          "WECHAT": true,
+          "STICK": true,
+          "COPY": true,
+          "PUBLISH": true,
+          "VIEW": true,
+          "SINA": true,
+          "DELETE": true,
+          "MOVE": true,
+          "SORT": true,
+          "UPDATE": true,
+          "PREVIEW": true,
+          "OFFLINE": true
+        },
+        "quote": false,
+        "quoteChannelName": "",
+        "status": 5,
+        "types": [
+          {
+            "id": 148,
+            "logo": "",
+            "operation": true,
+            "typeName": "热门"
+          },
+          {
+            "id": 149,
+            "logo": "",
+            "operation": true,
+            "typeName": "头条"
+          },
+          {
+            "id": 175,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推"
+          },
+          {
+            "id": 186,
+            "logo": "",
+            "operation": true,
+            "typeName": "焦点"
+          },
+          {
+            "id": 215,
+            "logo": "",
+            "operation": true,
+            "typeName": "猜你喜欢"
+          },
+          {
+            "id": 224,
+            "logo": "",
+            "operation": true,
+            "typeName": "首推-中"
+          },
+          {
+            "id": 263,
+            "logo": "",
+            "operation": true,
+            "typeName": "首页要闻"
+          }
+        ]
+      }
+    ],
+    "first": true,
+    "last": false,
+    "size": 10,
+    "totalElements": 11,
+    "totalPages": 2
+  },
+  "message": "操作成功",
+  "redirectUrl": "",
+  "requestUrl": "",
+  "timestamp": "2020-04-20 15:40:29",
+  "token": ""
+}
