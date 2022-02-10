@@ -49,7 +49,7 @@
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.2.0",
     "gulp-css-wrap": "^0.1.2",
-    "node-sass": "^4.9.0",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.1",
     "path": "^0.12.7",
     "sass-loader": "^7.1.0",
